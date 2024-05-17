@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>stack package &#8212; Collection Classes Documentation 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="queue package" href="queue.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="stack-package">
+<h1>stack package<a class="headerlink" href="#stack-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-stack.balancedparens">
+<span id="stack-balancedparens-module"></span><h2>stack.balancedparens module<a class="headerlink" href="#module-stack.balancedparens" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stack.balancedparens.balancedparens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stack.balancedparens.</span></span><span class="sig-name descname"><span class="pre">balancedparens</span></span><a class="reference internal" href="_modules/stack/balancedparens.html#balancedparens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.balancedparens.balancedparens" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.balancedparens.balancedparens.isBalanced">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isBalanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/balancedparens.html#balancedparens.isBalanced"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.balancedparens.balancedparens.isBalanced" title="Link to this definition">¶</a></dt>
+<dd><p>Checks a specified mathematical expression to see when the
+parenthesis are balanced.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>expression (str): specified mathematical expression</p>
+</dd>
+<dt>Returns:</dt><dd><p>Boolean: True if the parenthesis in the expression are 
+balanced, else False</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stack.calculator">
+<span id="stack-calculator-module"></span><h2>stack.calculator module<a class="headerlink" href="#module-stack.calculator" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stack.calculator.calculator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stack.calculator.</span></span><span class="sig-name descname"><span class="pre">calculator</span></span><a class="reference internal" href="_modules/stack/calculator.html#calculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.calculator.calculator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.calculator.calculator.evaluate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/calculator.html#calculator.evaluate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.calculator.calculator.evaluate" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates a specified mathematical expression.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>expression (str): specified mathematical expression</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: the result of the mathematical expression</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.calculator.calculator.evaluateStackTops">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluateStackTops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/calculator.html#calculator.evaluateStackTops"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.calculator.calculator.evaluateStackTops" title="Link to this definition">¶</a></dt>
+<dd><p>Applies an operation taken from the specified operations stack to 
+two numbers taken from the specified numbers stack.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>numbers (_type_): specified numbers stack
+operations (_type_): specified operations stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stack.stack">
+<span id="stack-stack-module"></span><h2>stack.stack module<a class="headerlink" href="#module-stack.stack" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stack.stack.stack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stack.stack.</span></span><span class="sig-name descname"><span class="pre">stack</span></span><a class="reference internal" href="_modules/stack/stack.html#stack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stack class that uses nodes as its underlying data structure.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Constructs an empty stack.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.getHead">
+<span class="sig-name descname"><span class="pre">getHead</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.getHead"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.getHead" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a reference to the head of the calling stack.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>stack: reference to the head of the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.getTail">
+<span class="sig-name descname"><span class="pre">getTail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.getTail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.getTail" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a reference to the tail of the calling stack.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>stack: reference to the tail of the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.size" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of nodes in the calling stack.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.push" title="Link to this definition">¶</a></dt>
+<dd><p>Adds the specified element to the top of the calling stack.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>element (_type_): specified element</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.peek">
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.peek" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the element at the top of the calling stack, but does not remove it.</p>
+<dl class="simple">
+<dt>Raises:</dt><dd><p>ValueError: indicates calling stack is empty</p>
+</dd>
+<dt>Returns:</dt><dd><p>_type_: element at the top of the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Returns and removes the element at the top of the calling stack.</p>
+<dl class="simple">
+<dt>Raises:</dt><dd><p>ValueError: indicates calling stack is empty</p>
+</dd>
+<dt>Returns:</dt><dd><p>_type_: element at the top of the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.isEmpty">
+<span class="sig-name descname"><span class="pre">isEmpty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.isEmpty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.isEmpty" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the calling stack is empty.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Boolean: True if the calling stack is empty, else False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.getData">
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.getData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.getData" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the data values in the calling stack.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: data values in the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack.stack.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/stack/stack.html#stack.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#stack.stack.stack.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Returns string representation of the calling stack.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: string representation of the calling stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stack">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-stack" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Collection Classes Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linkedlist.html">linkedlist package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">node package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">queue package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">stack package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="queue.html" title="previous chapter">queue package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Susie.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/stack.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

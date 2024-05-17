@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>node package &#8212; Collection Classes Documentation 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="queue package" href="queue.html" />
+    <link rel="prev" title="main module" href="main.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="node-package">
+<h1>node package<a class="headerlink" href="#node-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-node.node">
+<span id="node-node-module"></span><h2>node.node module<a class="headerlink" href="#module-node.node" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="node.node.node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">node.node.</span></span><span class="sig-name descname"><span class="pre">node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The node class holds a collection of characters using nodes.  
+It includes methods that allow the nodes to be manipulated and modified.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Constructs a node using specified data value and link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>__data</strong> – data value for node</p></li>
+<li><p><strong>__link</strong> – link for node</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Args:</dt><dd><p>data (str): specified data value
+link (node): specified link</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.getData">
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.getData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.getData" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the data value stored in the calling node.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: data value stored in the calling node</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.setData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.setData" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the data value stored in the calling node to the specified
+data value.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>data (str): specified data value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.getLink">
+<span class="sig-name descname"><span class="pre">getLink</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.getLink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.getLink" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the link stored in the calling node.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>node: link stored in the calling node</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.setLink">
+<span class="sig-name descname"><span class="pre">setLink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.setLink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.setLink" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the link stored in the calling node to the specified
+link.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>link (node): specified link</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.addNodeAfter">
+<span class="sig-name descname"><span class="pre">addNodeAfter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.addNodeAfter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.addNodeAfter" title="Link to this definition">¶</a></dt>
+<dd><p>Adds a new node containing a specified element value
+at a selected position in the calling node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>element (str): specified element value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.removeNodeAfter">
+<span class="sig-name descname"><span class="pre">removeNodeAfter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.removeNodeAfter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.removeNodeAfter" title="Link to this definition">¶</a></dt>
+<dd><p>Removes a node from a selected position in the calling
+node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listLength">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listLength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listLength" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the number of nodes in a specified node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>head (node): specified node</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: number of nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listSearch">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listSearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listSearch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listSearch" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for a specified target value in a specified node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>head (node): specified node
+target (str): specified target value</p>
+</dd>
+<dt>Returns:</dt><dd><p>node: reference to node that contains specified target value
+if specified target value is found, else None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listPosition">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listPosition" title="Link to this definition">¶</a></dt>
+<dd><p>Searches for a node in a specified node based on
+a specified posotion.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>head (node): specified node
+position (int): specified posotion</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: indicates position is less than or equal to zero</p>
+</dd>
+<dt>Returns:</dt><dd><p>node: reference to node at specified position if specified 
+position is found, else null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listCopy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listCopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listCopy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listCopy" title="Link to this definition">¶</a></dt>
+<dd><p>Makes a copy of a specified node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>source (node): specified node</p>
+</dd>
+<dt>Returns:</dt><dd><p>node: reference to head of copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listCopyWithTail">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listCopyWithTail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listCopyWithTail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listCopyWithTail" title="Link to this definition">¶</a></dt>
+<dd><p>Makes a copy of a specified node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>source (node): specified node</p>
+</dd>
+<dt>Returns:</dt><dd><p>[node]: reference to head and tail of copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.listPart">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listPart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.listPart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.listPart" title="Link to this definition">¶</a></dt>
+<dd><p>Makes a copy of node starting at a specified node
+and ending at a specified node.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>start (node): specified starting node
+end (node): specified ending node</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: indicates start in None
+ValueError: indicates end in None
+ValueError: indicates end not found in start</p>
+</dd>
+<dt>Returns:</dt><dd><p>[node]: reference to head and tail of copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="node.node.node.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/node/node.html#node.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#node.node.node.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-node">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-node" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Collection Classes Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linkedlist.html">linkedlist package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">node package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">queue package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack.html">stack package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="main.html" title="previous chapter">main module</a></li>
+      <li>Next: <a href="queue.html" title="next chapter">queue package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Susie.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/node.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linkedlist.linkedlist &#8212; Collection Classes Documentation 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=039e1c02" />
+    <script src="../../_static/documentation_options.js?v=8d563738"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for linkedlist.linkedlist</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">node.node</span> <span class="kn">import</span> <span class="o">*</span>
+
+<div class="viewcode-block" id="linkedlist">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist">[docs]</a>
+<span class="k">class</span> <span class="nc">linkedlist</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The linkedlist class holds a collection of characters using a linked list of nodes.  </span>
+<span class="sd">    It includes methods that allow the linkedlist to be manipulated and modified.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="linkedlist.__init__">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructs an empty linkedlist.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">__head</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="linkedlist.size">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.size">[docs]</a>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the number of nodes in this linkedlist.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: number of nodes</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span></div>
+
+    
+<div class="viewcode-block" id="linkedlist.getHead">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.getHead">[docs]</a>
+    <span class="k">def</span> <span class="nf">getHead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a reference to the head of the calling linkedlist.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            linkedlist: reference to the head of the calling linkedlist</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span></div>
+
+    
+<div class="viewcode-block" id="linkedlist.getTail">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.getTail">[docs]</a>
+    <span class="k">def</span> <span class="nf">getTail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a reference to the tail of the calling linkedlist.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            linkedlist: reference to the tail of the calling linkedlist</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span></div>
+
+    
+<div class="viewcode-block" id="linkedlist.add">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.add">[docs]</a>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a node that contains the specified character to the </span>
+<span class="sd">        head of the calling linkedlist if the head is None, else it adds</span>
+<span class="sd">        the node to the tail.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            element (str): specified character</span>
+<span class="sd">        &quot;&quot;&quot;</span>    
+        <span class="c1"># if head is None    </span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span> <span class="o">==</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="c1"># add node to head</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__head</span> <span class="o">=</span> <span class="n">node</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="c1"># make tail refer to the same node as head</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># add the node to tail if head is not None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span><span class="o">.</span><span class="n">addNodeAfter</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+            <span class="c1"># advance to next node in tail</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span><span class="o">.</span><span class="n">getLink</span><span class="p">()</span>
+
+        <span class="c1"># get the number of nodes in the calling linkedlist</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">listLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="linkedlist.addMany">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.addMany">[docs]</a>
+    <span class="k">def</span> <span class="nf">addMany</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a variable number of nodes that contain the specified characters to the </span>
+<span class="sd">        head of the calling linkedlist if the head is equal to None, else it adds</span>
+<span class="sd">        them to the tail.</span>
+<span class="sd">        &quot;&quot;&quot;</span>   
+        <span class="c1"># loop through all the specified characters and add them to the calling linkedlist</span>
+        <span class="c1"># as nodes  </span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="linkedlist.addAll">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.addAll">[docs]</a>
+    <span class="k">def</span> <span class="nf">addAll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addend</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds the contents of the specified linkedlist to the end of the calling linkedlist.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            addend (linkedlist): specified linkedlist</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: indicates addend is None</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="k">try</span><span class="p">:</span>       
+            <span class="c1"># if addend is None, raise error   </span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">addend</span> <span class="o">==</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Addend may not be None.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># display error and exit</span>
+            <span class="n">exit</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># if addend has one or more nodes</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">addend</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="c1"># get a reference to the head and tail of a copy of addend</span>
+                <span class="n">copyInfo</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">listCopyWithTail</span><span class="p">(</span><span class="n">addend</span><span class="o">.</span><span class="n">getHead</span><span class="p">())</span>
+                <span class="c1"># set tail&#39;s link to the head of the copy</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span><span class="o">.</span><span class="n">setLink</span><span class="p">(</span><span class="n">copyInfo</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="c1"># make tail refer to the same node as the tail of the copy</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span> <span class="o">=</span> <span class="n">copyInfo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># get the number of nodes in the calling linkedlist</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">listLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="linkedlist.remove">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.remove">[docs]</a>
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Removes a node containing the specified target from the calling linkedlist.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            target (str): specified target</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Boolean: False if the specified target exists in the calling linkedlist,</span>
+<span class="sd">            else True</span>
+<span class="sd">        &quot;&quot;&quot;</span>   
+        <span class="c1"># get a reference to the node thats data matches the specified target</span>
+        <span class="c1"># and assign the reference to targetNode     </span>
+        <span class="n">targetNode</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">listSearch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+        <span class="c1"># if targetNode is None, return False</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">targetNode</span> <span class="o">==</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># if a targetNode was found, get the data in the node head</span>
+            <span class="c1"># refers to and set it in the node that targetNode refers to</span>
+            <span class="n">targetNode</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="o">.</span><span class="n">getData</span><span class="p">())</span>
+            <span class="c1"># advance to next node in head</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="o">.</span><span class="n">getLink</span><span class="p">()</span>
+            <span class="c1"># get the number of nodes in the calling linkedlist</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">listLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="p">)</span>
+            <span class="c1"># return True</span>
+            <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="linkedlist.getData">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.getData">[docs]</a>
+    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the data values in the calling linkedlist.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: data values in the calling linkedlist</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">cursor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span>    <span class="c1"># used to step through head </span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>               <span class="c1"># string representation of data values in the calling linkedlist</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>                   <span class="c1"># used to count nodes</span>
+
+        <span class="c1"># loop through calling linkedlist, get data value in each node and concatenate it to data</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">+</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">getData</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">getLink</span><span class="p">()</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="c1"># return data values</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    
+<div class="viewcode-block" id="linkedlist.__str__">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.__str__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns string representation of the calling linkedlist.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: string representation of the calling linkedlist</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span><span class="si">}</span><span class="s2">]&quot;</span></div>
+
+    
+<div class="viewcode-block" id="linkedlist.__eq__">
+<a class="viewcode-back" href="../../linkedlist.html#linkedlist.linkedlist.linkedlist.__eq__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests if the calling linkedlist is equal to the specified object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            other: the specified object</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Boolean: True if the calling linkedlist is equal to the specified</span>
+<span class="sd">            object, else False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">linkedlist</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">__head</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">__tail</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tail</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">__manyNodes</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">__manyNodes</span><span class="p">:</span>
+                            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+</div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Collection Classes Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">src</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Susie.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
